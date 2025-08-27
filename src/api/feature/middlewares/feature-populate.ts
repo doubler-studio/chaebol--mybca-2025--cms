@@ -2,7 +2,7 @@ import type { Core } from "@strapi/strapi";
 
 // Correct population for dynamic zones - must use "*" for polymorphic structures
 const populate = {
-  body: {
+  dynamic: {
     populate: "*", // This will populate all components in the dynamic zone
   },
 };

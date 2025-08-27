@@ -16,7 +16,7 @@ export interface CardKeuntungan extends Struct.ComponentSchema {
 export interface ComponentAccordion extends Struct.ComponentSchema {
   collectionName: 'components_component_accordions';
   info: {
-    displayName: 'Accordion';
+    displayName: 'Accordion / Tab';
   };
   attributes: {
     body: Schema.Attribute.RichText &
@@ -54,14 +54,7 @@ export interface FeatureKetentuan extends Struct.ComponentSchema {
     displayName: 'Accordion Tab';
   };
   attributes: {
-    biaya: Schema.Attribute.RichText &
-      Schema.Attribute.CustomField<'plugin::tinymce.tinymce'>;
-    limit: Schema.Attribute.RichText &
-      Schema.Attribute.CustomField<'plugin::tinymce.tinymce'>;
-    setoran_awal: Schema.Attribute.RichText &
-      Schema.Attribute.CustomField<'plugin::tinymce.tinymce'>;
-    tambah_dana: Schema.Attribute.RichText &
-      Schema.Attribute.CustomField<'plugin::tinymce.tinymce'>;
+    tabs: Schema.Attribute.Component<'component.accordion', true>;
     title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
@@ -87,30 +80,6 @@ export interface FeatureTutorialVideo extends Struct.ComponentSchema {
   };
 }
 
-export interface GlobalAccordions extends Struct.ComponentSchema {
-  collectionName: 'components_global_accordions';
-  info: {
-    displayName: 'Accordions';
-  };
-  attributes: {
-    accordion: Schema.Attribute.Component<'component.accordion', true>;
-  };
-}
-
-export interface GlobalBanner extends Struct.ComponentSchema {
-  collectionName: 'components_global_banners';
-  info: {
-    displayName: 'Banner';
-    icon: 'picture';
-  };
-  attributes: {
-    body: Schema.Attribute.RichText &
-      Schema.Attribute.CustomField<'plugin::tinymce.tinymce'>;
-    image_url: Schema.Attribute.String & Schema.Attribute.Required;
-    Links: Schema.Attribute.Component<'component.button', true>;
-  };
-}
-
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
@@ -121,8 +90,6 @@ declare module '@strapi/strapi' {
       'feature.ketentuan': FeatureKetentuan;
       'feature.list-keuntungan': FeatureListKeuntungan;
       'feature.tutorial-video': FeatureTutorialVideo;
-      'global.accordions': GlobalAccordions;
-      'global.banner': GlobalBanner;
     }
   }
 }

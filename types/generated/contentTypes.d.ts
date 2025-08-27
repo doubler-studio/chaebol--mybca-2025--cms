@@ -421,18 +421,20 @@ export interface ApiFeatureFeature extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    body: Schema.Attribute.DynamicZone<
-      [
-        'feature.ketentuan',
-        'global.accordions',
-        'global.banner',
-        'feature.tutorial-video',
-        'feature.list-keuntungan',
-      ]
-    >;
+    body: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<'plugin::tinymce.tinymce'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    dynamic: Schema.Attribute.DynamicZone<
+      [
+        'feature.ketentuan',
+        'feature.tutorial-video',
+        'feature.list-keuntungan',
+        'component.youtube',
+        'component.accordion',
+      ]
+    >;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',

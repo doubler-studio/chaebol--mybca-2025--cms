@@ -9,21 +9,10 @@
       "type": "string",
       "required": true
     },
-    "biaya": {
-      "type": "customField",
-      "customField": "plugin::tinymce.tinymce"
-    },
-    "limit": {
-      "type": "customField",
-      "customField": "plugin::tinymce.tinymce"
-    },
-    "setoran_awal": {
-      "type": "customField",
-      "customField": "plugin::tinymce.tinymce"
-    },
-    "tambah_dana": {
-      "type": "customField",
-      "customField": "plugin::tinymce.tinymce"
+    "tabs": {
+      "type": "component",
+      "component": "component.accordion",
+      "repeatable": true
     }
   },
   "config": {}

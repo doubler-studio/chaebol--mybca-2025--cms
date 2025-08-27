@@ -14,18 +14,22 @@
     "title": {
       "type": "string"
     },
+    "body": {
+      "type": "customField",
+      "customField": "plugin::tinymce.tinymce"
+    },
     "slug": {
       "type": "uid",
       "targetField": "title"
     },
-    "body": {
+    "dynamic": {
       "type": "dynamiczone",
       "components": [
         "feature.ketentuan",
-        "global.accordions",
-        "global.banner",
         "feature.tutorial-video",
-        "feature.list-keuntungan"
+        "feature.list-keuntungan",
+        "component.youtube",
+        "component.accordion"
       ]
     }
   }
