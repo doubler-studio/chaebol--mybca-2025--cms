@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_global_banners",
+  "info": {
+    "displayName": "Banner",
+    "icon": "picture"
+  },
+  "options": {},
+  "attributes": {
+    "image_url": {
+      "type": "string",
+      "required": true
+    },
+    "body": {
+      "type": "customField",
+      "customField": "plugin::tinymce.tinymce",
+      "required": false
+    },
+    "Links": {
+      "type": "component",
+      "component": "component.button",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

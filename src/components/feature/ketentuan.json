@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_feature_ketentuans",
+  "info": {
+    "displayName": "Accordion Tab"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "biaya": {
+      "type": "customField",
+      "customField": "plugin::tinymce.tinymce"
+    },
+    "limit": {
+      "type": "customField",
+      "customField": "plugin::tinymce.tinymce"
+    },
+    "setoran_awal": {
+      "type": "customField",
+      "customField": "plugin::tinymce.tinymce"
+    },
+    "tambah_dana": {
+      "type": "customField",
+      "customField": "plugin::tinymce.tinymce"
+    }
+  },
+  "config": {}
+}

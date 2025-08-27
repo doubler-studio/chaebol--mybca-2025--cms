@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_global_accordions",
+  "info": {
+    "displayName": "Accordions"
+  },
+  "options": {},
+  "attributes": {
+    "accordion": {
+      "type": "component",
+      "component": "component.accordion",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

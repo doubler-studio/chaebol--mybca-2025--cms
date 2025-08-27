@@ -15,7 +15,10 @@
     "upgrade:dry": "npx @strapi/upgrade latest --dry"
   },
   "dependencies": {
+    "@sklinet/strapi-plugin-tinymce": "^1.1.7",
     "@strapi/plugin-cloud": "5.23.0",
+    "@strapi/plugin-documentation": "^5.23.0",
+    "@strapi/plugin-seo": "^2.0.8",
     "@strapi/plugin-users-permissions": "5.23.0",
     "@strapi/strapi": "5.23.0",
     "better-sqlite3": "11.3.0",
@@ -36,6 +39,7 @@
   },
   "strapi": {
     "uuid": "ee7381a5-09fe-4157-b69f-c8ff718873a9",
-    "installId": "1d67c7889501369c5939c0e9a356e0434295477c34f3f6cae61b6c7dd1cbed2b"
+    "installId": "1d67c7889501369c5939c0e9a356e0434295477c34f3f6cae61b6c7dd1cbed2b",
+    "telemetryDisabled": true
   }
 }
