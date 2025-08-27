@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_feature_list_keuntungans",
+  "info": {
+    "displayName": "List Keuntungan"
+  },
+  "options": {},
+  "attributes": {
+    "cards": {
+      "type": "component",
+      "component": "card.keuntungan",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

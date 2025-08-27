@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_feature_tutorial_videos",
+  "info": {
+    "displayName": "Tutorial Video"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "videos": {
+      "type": "component",
+      "component": "component.youtube",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

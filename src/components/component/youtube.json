@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_component_youtubes",
+  "info": {
+    "displayName": "Youtube",
+    "icon": "play"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "youtube_url": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

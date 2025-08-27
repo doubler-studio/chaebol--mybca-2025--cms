@@ -23,7 +23,9 @@
       "components": [
         "feature.ketentuan",
         "global.accordions",
-        "global.banner"
+        "global.banner",
+        "feature.tutorial-video",
+        "feature.list-keuntungan"
       ]
     }
   }

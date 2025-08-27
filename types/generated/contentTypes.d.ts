@@ -422,7 +422,13 @@ export interface ApiFeatureFeature extends Struct.CollectionTypeSchema {
   };
   attributes: {
     body: Schema.Attribute.DynamicZone<
-      ['feature.ketentuan', 'global.accordions', 'global.banner']
+      [
+        'feature.ketentuan',
+        'global.accordions',
+        'global.banner',
+        'feature.tutorial-video',
+        'feature.list-keuntungan',
+      ]
     >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

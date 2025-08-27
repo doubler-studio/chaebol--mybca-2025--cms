@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_card_keuntungans",
+  "info": {
+    "displayName": "Keuntungan"
+  },
+  "options": {},
+  "attributes": {
+    "icon_url": {
+      "type": "string"
+    },
+    "body": {
+      "type": "customField",
+      "customField": "plugin::tinymce.tinymce"
+    },
+    "link": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

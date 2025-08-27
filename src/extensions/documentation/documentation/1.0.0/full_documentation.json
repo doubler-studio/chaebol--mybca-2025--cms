@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-08-27T06:05:14.558Z"
+    "x-generation-date": "2025-08-27T08:04:27.857Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -2023,6 +2023,12 @@
                     },
                     {
                       "$ref": "#/components/schemas/GlobalBannerComponent"
+                    },
+                    {
+                      "$ref": "#/components/schemas/FeatureTutorialVideoComponent"
+                    },
+                    {
+                      "$ref": "#/components/schemas/FeatureListKeuntunganComponent"
                     }
                   ]
                 },
@@ -2031,7 +2037,9 @@
                   "mapping": {
                     "feature.ketentuan": "#/components/schemas/FeatureKetentuanComponent",
                     "global.accordions": "#/components/schemas/GlobalAccordionsComponent",
-                    "global.banner": "#/components/schemas/GlobalBannerComponent"
+                    "global.banner": "#/components/schemas/GlobalBannerComponent",
+                    "feature.tutorial-video": "#/components/schemas/FeatureTutorialVideoComponent",
+                    "feature.list-keuntungan": "#/components/schemas/FeatureListKeuntunganComponent"
                   }
                 }
               },
@@ -2118,6 +2126,12 @@
                 },
                 {
                   "$ref": "#/components/schemas/GlobalBannerComponent"
+                },
+                {
+                  "$ref": "#/components/schemas/FeatureTutorialVideoComponent"
+                },
+                {
+                  "$ref": "#/components/schemas/FeatureListKeuntunganComponent"
                 }
               ]
             },
@@ -2126,7 +2140,9 @@
               "mapping": {
                 "feature.ketentuan": "#/components/schemas/FeatureKetentuanComponent",
                 "global.accordions": "#/components/schemas/GlobalAccordionsComponent",
-                "global.banner": "#/components/schemas/GlobalBannerComponent"
+                "global.banner": "#/components/schemas/GlobalBannerComponent",
+                "feature.tutorial-video": "#/components/schemas/FeatureTutorialVideoComponent",
+                "feature.list-keuntungan": "#/components/schemas/FeatureListKeuntunganComponent"
               }
             }
           },
@@ -2448,6 +2464,12 @@
                       },
                       {
                         "$ref": "#/components/schemas/GlobalBannerComponent"
+                      },
+                      {
+                        "$ref": "#/components/schemas/FeatureTutorialVideoComponent"
+                      },
+                      {
+                        "$ref": "#/components/schemas/FeatureListKeuntunganComponent"
                       }
                     ]
                   },
@@ -2456,7 +2478,9 @@
                     "mapping": {
                       "feature.ketentuan": "#/components/schemas/FeatureKetentuanComponent",
                       "global.accordions": "#/components/schemas/GlobalAccordionsComponent",
-                      "global.banner": "#/components/schemas/GlobalBannerComponent"
+                      "global.banner": "#/components/schemas/GlobalBannerComponent",
+                      "feature.tutorial-video": "#/components/schemas/FeatureTutorialVideoComponent",
+                      "feature.list-keuntungan": "#/components/schemas/FeatureListKeuntunganComponent"
                     }
                   }
                 },
@@ -2626,6 +2650,80 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/ComponentButtonComponent"
+            }
+          }
+        }
+      },
+      "ComponentYoutubeComponent": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "title": {
+            "type": "string"
+          },
+          "youtube_url": {
+            "type": "string"
+          }
+        }
+      },
+      "FeatureTutorialVideoComponent": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "__component": {
+            "type": "string",
+            "enum": [
+              "feature.tutorial-video"
+            ]
+          },
+          "title": {
+            "type": "string"
+          },
+          "videos": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ComponentYoutubeComponent"
+            }
+          }
+        }
+      },
+      "CardKeuntunganComponent": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "icon_url": {
+            "type": "string"
+          },
+          "body": {
+            "type": "string"
+          },
+          "link": {
+            "type": "string"
+          }
+        }
+      },
+      "FeatureListKeuntunganComponent": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "__component": {
+            "type": "string",
+            "enum": [
+              "feature.list-keuntungan"
+            ]
+          },
+          "cards": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CardKeuntunganComponent"
             }
           }
         }
