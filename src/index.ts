@@ -1,4 +1,4 @@
-// import type { Core } from '@strapi/strapi';
+import type { Core } from "@strapi/strapi";
 
 export default {
   /**
@@ -16,5 +16,24 @@ export default {
    * This gives you an opportunity to set up your data model,
    * run jobs, or perform some special logic.
    */
-  bootstrap(/* { strapi }: { strapi: Core.Strapi } */) {},
+  bootstrap({ strapi }: { strapi: Core.Strapi }) {
+    strapi.db.lifecycles.subscribe({
+      models: ["api::feature.feature"],
+      afterCreate: async (event) => {
+        const { result } = event;
+        const { slug, id } = result;
+        console.log("publish/create", slug, id);
+      },
+      afterUpdate: async (event) => {
+        const { result } = event;
+        const { slug, id } = result;
+        console.log("update", slug, id);
+      },
+      afterDelete: async (event) => {
+        const { result } = event;
+        const { slug, id } = result;
+        console.log("delete", slug, id);
+      },
+    });
+  },
 };

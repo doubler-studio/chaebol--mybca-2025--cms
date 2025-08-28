@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_tutorial_steps",
+  "info": {
+    "displayName": "Step",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "image_url": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
