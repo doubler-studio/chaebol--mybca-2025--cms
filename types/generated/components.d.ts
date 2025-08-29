@@ -80,6 +80,18 @@ export interface FeatureTutorialVideo extends Struct.ComponentSchema {
   };
 }
 
+export interface TutorialStep extends Struct.ComponentSchema {
+  collectionName: 'components_tutorial_steps';
+  info: {
+    displayName: 'Step';
+    icon: 'bulletList';
+  };
+  attributes: {
+    image_url: Schema.Attribute.String;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
@@ -90,6 +102,7 @@ declare module '@strapi/strapi' {
       'feature.ketentuan': FeatureKetentuan;
       'feature.list-keuntungan': FeatureListKeuntungan;
       'feature.tutorial-video': FeatureTutorialVideo;
+      'tutorial.step': TutorialStep;
     }
   }
 }
