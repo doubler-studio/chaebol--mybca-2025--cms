@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_component_2_col_sliders",
+  "info": {
+    "displayName": "Slide"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "body": {
+      "type": "customField",
+      "customField": "plugin::tinymce.tinymce"
+    },
+    "image_url": {
+      "type": "string"
+    },
+    "video_url": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

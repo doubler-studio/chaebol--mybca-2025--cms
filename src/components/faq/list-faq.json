@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_faq_list_faqs",
+  "info": {
+    "displayName": "List FAQ"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "sub_title": {
+      "type": "string"
+    },
+    "faqs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::faq.faq"
+    },
+    "button": {
+      "type": "component",
+      "component": "component.button",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

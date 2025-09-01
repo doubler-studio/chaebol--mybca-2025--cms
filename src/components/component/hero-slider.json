@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_component_hero_sliders",
+  "info": {
+    "displayName": "Hero Slider",
+    "icon": "picture"
+  },
+  "options": {},
+  "attributes": {
+    "slide": {
+      "type": "component",
+      "component": "component.2-col-slider",
+      "repeatable": false
+    },
+    "icon_url": {
+      "type": "string"
+    },
+    "buttons": {
+      "type": "component",
+      "component": "component.button",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

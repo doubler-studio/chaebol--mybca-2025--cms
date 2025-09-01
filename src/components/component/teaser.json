@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_component_teasers",
+  "info": {
+    "displayName": "Teaser"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "sub_title": {
+      "type": "string"
+    },
+    "body": {
+      "type": "customField",
+      "customField": "plugin::tinymce.tinymce"
+    },
+    "image_url": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
