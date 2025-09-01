@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_tutorial_list_tutorials",
+  "info": {
+    "displayName": "List Tutorials"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "sub_title": {
+      "type": "string"
+    },
+    "tutorials": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tutorial.tutorial"
+    }
+  },
+  "config": {}
+}

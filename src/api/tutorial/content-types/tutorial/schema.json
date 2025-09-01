@@ -15,6 +15,10 @@
       "type": "string",
       "required": true
     },
+    "icon_url": {
+      "type": "string",
+      "required": true
+    },
     "steps": {
       "type": "component",
       "component": "tutorial.step",

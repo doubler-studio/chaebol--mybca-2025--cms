@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_promo_list_promos",
+  "info": {
+    "displayName": "List Promo"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "sub_title": {
+      "type": "string"
+    },
+    "promos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::promo.promo"
+    },
+    "button": {
+      "type": "component",
+      "component": "component.button",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}
